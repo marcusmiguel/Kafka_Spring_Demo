@@ -1,0 +1,26 @@
+server:
+  port:
+    8081
+
+topic:
+  name:
+    ordertopic
+
+spring:
+  kafka:
+    consumer:
+      bootstrap-servers: localhost:9092
+      group-id: appOrder
+      spring:
+        jpa:
+          generate-ddl:
+            true
+  jpa:
+    hibernate:
+      ddl-auto: create
+      dialect: org.hibernate.dialect.SQLServerDialect
+  datasource:
+    driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
+    url: jdbc:sqlserver://localhost:1433;databaseName=Catalog
+    username: sa
+    password: SqlServer2017!

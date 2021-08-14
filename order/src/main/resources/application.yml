@@ -1,0 +1,8 @@
+topic:
+  name:
+    ordertopic
+
+spring:
+  kafka:
+    producer:
+      bootstrap-servers: localhost:9092
